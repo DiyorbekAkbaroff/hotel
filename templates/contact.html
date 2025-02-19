@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center mt-3">We would love to hear from you! Please fill out the form below or use the contact details provided.</p>
+        
+        <div class="row mt-5">
+            <!-- Contact Information -->
+            <div class="col-md-6">
+                <h4>Contact Information</h4>
+                <p><strong>Address:</strong> 123 Luxury Street, Paradise City</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Email:</strong> info@hotelname.com</p>
+                <p><strong>Hours:</strong> Mon-Sun: 24/7</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <h4>Send Us a Message</h4>
+                <form method="post" action="#">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control transparent-input" id="name" name="name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control transparent-input" id="email" name="email" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control transparent-input" id="message" name="message" rows="5" placeholder="Enter Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
