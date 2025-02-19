@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Room Details</h2>
+        <div class="row">
+            <div class="col-md-6 mx-auto" style="color: brown">
+                <div class="card shadow">
+                    <img src="{{ room.5 }}" class="card-img-top" alt="Room Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Room Type: {{ room.4 }}</h5>
+                        <p class="card-text"><strong>Room Number:</strong> {{ room.1 }}</p>
+                        <p class="card-text"><strong>Size:</strong> {{ room.2 }} sqm</p>
+                        <p class="card-text"><strong>Price:</strong> ${{ room.3 }} per night</p>
+                        <p class="card-text"><strong>Description:</strong> {{ room.6 }}</p>
+                        <a href="{{ url_for('rooms_view') }}" class="btn btn-secondary">Back to Rooms</a>
+                        <a href="#" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -51,6 +51,18 @@ class DB:
         else:
             return False
 
+    def get_rooms(self) -> list[tuple]:
+        self.__cursor.execute("SELECT * FROM rooms LIMIT 6")
+
+        rooms = self.__cursor.fetchall()
+        return rooms
+
+    def get_room(self, room_id) -> tuple:
+        self.__cursor.execute("SELECT * FROM rooms WHERE id = %s", (room_id,))
+
+        room = self.__cursor.fetchone()
+        return room
+
     def __commit(self) -> None:
         self.__connection.commit()
 

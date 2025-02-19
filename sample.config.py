@@ -2,6 +2,7 @@
 HOST = 'server host'
 PORT = 'server port'
 DEBUG = 'debug mode'
+SECRET_KEY = 'this is a secret key'
 
 # DATABASE
 DB_HOST = 'db host'
